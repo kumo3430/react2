@@ -10,4 +10,8 @@ class ProductService
   { 
       return Product::with('prices' , 'images'); 
   }
+  public function getSingleProduct($column , $value) 
+{ 
+    return Product::with('prices' , 'images')->where($column , $value); 
+}
 }

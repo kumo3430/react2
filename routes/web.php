@@ -37,5 +37,5 @@ Route::middleware('auth')->group(function () {
 
 Route::get('home' , [\App\Http\Controllers\HomeController::class,'index'])->name('home'); 
 Route::get('home' , ['uses'=>'\App\Http\Controllers\HomeController@index' , 'as' => 'home']);
-
+Route::get('product/{product_id}' , [\App\Http\Controllers\homeController::class,'product'])->name('product');
 require __DIR__.'/auth.php';
